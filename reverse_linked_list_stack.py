@@ -1,15 +1,14 @@
 #!/bin/python3
+# Hackerrank problem : https://www.hackerrank.com/challenges/reverse-a-linked-list/problem
 
-import math
 import os
-import random
-import re
-import sys
+
 
 class SinglyLinkedListNode:
     def __init__(self, node_data):
         self.data = node_data
         self.next = None
+
 
 class SinglyLinkedList:
     def __init__(self):
@@ -26,6 +25,7 @@ class SinglyLinkedList:
 
 
         self.tail = node
+
 
 def print_singly_linked_list(node, sep, fptr):
     while node:
