@@ -1,4 +1,7 @@
-# Hackerrank excercise : https://www.hackerrank.com/challenges/tree-inorder-traversal
+# Hackerrank excercises :
+# https://www.hackerrank.com/challenges/tree-preorder-traversal
+# https://www.hackerrank.com/challenges/tree-inorder-traversal
+# https://www.hackerrank.com/challenges/tree-postorder-traversal
 
 
 class Node:
@@ -47,6 +50,13 @@ self.info (the value of the node)
 """
 
 
+def preOrder(root):
+    if root:
+        print(root.info, end = ' ')
+        preOrder(root.left)
+        preOrder(root.right)
+
+
 def inOrder(root):
     if root:
         inOrder(root.left)
@@ -54,11 +64,12 @@ def inOrder(root):
         inOrder(root.right)
 
 
-def preOrder(root):
+def postOrder(root):
     if root:
-        print(root.info, end = ' ')
-        preOrder(root.left)
-        preOrder(root.right)
+        postOrder(root.left)
+        postOrder(root.right)
+        print(root.info, end=' ')
+
 
 tree = BinarySearchTree()
 t = int(input())
