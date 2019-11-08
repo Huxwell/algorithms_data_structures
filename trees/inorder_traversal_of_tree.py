@@ -48,13 +48,17 @@ self.info (the value of the node)
 
 
 def inOrder(root):
-    # Write your code here
-    if root == None:
-        return
-    inOrder(root.left)
-    print(root.info, end=' ')
-    inOrder(root.right)
+    if root:
+        inOrder(root.left)
+        print(root.info, end=' ')
+        inOrder(root.right)
 
+
+def preOrder(root):
+    if root:
+        print(root.info, end = ' ')
+        preOrder(root.left)
+        preOrder(root.right)
 
 tree = BinarySearchTree()
 t = int(input())
