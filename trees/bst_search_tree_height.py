@@ -51,13 +51,13 @@ class Node:
 
 
 def height(root):
-    return postOrder(root) - 1
+    return whateverOrder(root) - 1
 
 
-def postOrder(node):
+def whateverOrder(node):
     if not node:
         return 0
-    return max(postOrder(node.left), postOrder(node.right)) + 1
+    return max(whateverOrder(node.left), whateverOrder(node.right)) + 1
 
 
 tree = BinarySearchTree()
