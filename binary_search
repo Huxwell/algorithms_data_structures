@@ -1,0 +1,19 @@
+def bin_search_eq(arr, target, mini, maxi): #looking for value equal to target
+    mid = (mini+maxi)//2
+    print("bin_search_eq t,m,g, mid", target, mini, maxi, mid)
+    
+    # if mini == maxi:
+    if mini > maxi:
+        # if arr[mini] == target:
+        #     return mini
+        # else:
+            return None
+    
+    if arr[mid] == target:
+        return mid
+    elif arr[mid] > target:
+        maxi = mid -1
+        return bin_search_eq(arr, target, mini, maxi)
+    else:
+        mini = mid +1
+        return bin_search_eq(arr, target, mini, maxi)
