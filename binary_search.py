@@ -17,3 +17,6 @@ def bin_search_eq(arr, target, mini, maxi): #looking for value equal to target
     else:
         mini = mid +1
         return bin_search_eq(arr, target, mini, maxi)
+
+def bin_search_lower_bound(arr, target, mini, maxi): #looking for first value higher than target
+    #pass
